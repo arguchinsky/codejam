@@ -66,4 +66,5 @@ const chooseHandler = (event) => {
         break;
     }
 }
-    
+
+document.getElementById('chooseImg').addEventListener('click', chooseHandler);
