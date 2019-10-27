@@ -43,4 +43,27 @@ const draw = (matrix, type) => {
             break;
     }
 }
+
+const chooseHandler = (event) => {
+    const target = event.target.closest('li').id;
+    switch(target){
+    case '4':
+        fetch('https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/stage-2/codejam-canvas/data/4x4.json')
+        .then(response => response.json()).then(data => {
+            const matrix = data;
+            draw(matrix , target);
+        });
+        break;
+    case '32':
+        fetch('https://raw.githubusercontent.com/rolling-scopes-school/tasks/master/tasks/stage-2/codejam-canvas/data/32x32.json')
+        .then(response => response.json()).then(data => {
+            const matrix = data;
+            draw(matrix , target);
+        });
+        break;
+    case 'img':
+        draw(null, 'img');
+        break;
+    }
+}
     
