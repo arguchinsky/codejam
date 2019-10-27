@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodeJamCanvas</title>
+</head>
+<body id="page" class="page">
+        <header class="header">
+            <nav class="menu">
+                <img class="menu--icon" src="./assets/image/icons/hum-menu.png" alt="">
+            </nav>
+            <h1 class="headline">CodeJam Canvas</h1>
+            <nav class="menu">
+                <img class="menu--icon" src="./assets/image/icons/dots-menu.png" alt="">
+            </nav>
+        </header>
+        <main class="main">
+            <section class="side controls">
+                <div class="controls--item">
+                    <ul class="tools">
+                        <div class="tools--half1">
+                            <li class="item">
+                                <img class="item--img" src="./assets/image/icons/paint-bucket.png" alt=""><span class="item--name">Paint bucket</span>
+                            </li>
+                            <li class="item">
+                                <img class="item--img" src="./assets/image/icons/choose-color.png" alt=""><span class="item--name">Choose color</span>
+                            </li>
+                        </div>
+                        <div class="tools--half2">
+                            <li class="tools--item item">
+                                <img class="item--img" src="./assets/image/icons/move.png" alt=""><span class="item--name">Move</span>
+                            </li>
+                            <li class="tools--item item">
+                                <img class="item--img" src="./assets/image/icons/transform.png" alt=""><span class="item--name">Transform</span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="controls--item">
+                    <ul class="tools">
+                        <div class="tools--half1">
+                            <li class="item">
+                                <div class="item--img color gray"></div><span class="item--name">Current color</span>
+                            </li>
+                            <li class="item">
+                                <div class="item--img color green"></div><span class="item--name">Prev color</span>
+                            </li>
+                        </div>
+                        <div class="tools--half2">
+                            <li class="tools--item item">
+                                <div class="item--img color red"></div><span class="item--name">red</span>
+                            </li>
+                            <li class="tools--item item">
+                                <div class="item--img color blue"></div><span class="item--name">blue</span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </section>
+            <section class="paint">
+                <canvas id="canvas" class="paint--canvas" width="512px" height="512px"></canvas>
+            </section>
+            <section class="side">
+                <ul id="chooseImg" class="switch-menu">
+                    <li id="4" class="item">
+                        <img class="item--img" src="./assets/image/icons/switch.png" alt=""><span class="item--name">4x4</span>
+                    </li>
+                    <li id="32" class="item">
+                        <img class="item--img" src="./assets/image/icons/switch.png" alt=""><span class="item--name">32x32</span>
+                    </li>
+                    <li id="img" class="item">
+                        <img class="item--img" src="./assets/image/icons/switch.png" alt=""><span class="item--name">PNG</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
