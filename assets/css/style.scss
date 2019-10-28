@@ -1,0 +1,123 @@
+@import "./variables";
+
+.page{
+    @include flex-column();
+    width: 100%;
+    height: auto;
+    background: $bg;
+    .header{
+        @include flex($around);
+        width: 100%;
+        height: 48px;
+        box-shadow: $shadow;
+        .menu{
+            padding: 0 1.4%;
+        }
+        .headline{
+            flex-grow: 1;
+            font-family: $family;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+
+    .main{
+        @include flex($around);
+        width: 100%;
+        height: auto;
+        margin-top: 73px;
+        .side{
+            @include flex-column($between);
+            width: 16%;
+            height: 584px;
+        }
+        .controls{
+            &--item{
+                @include flex-column($around);
+                width: 100%;
+                height: 246px;
+                background-color: $bg;
+                box-shadow: $shadow;
+                .tools{
+                    @include flex-column($around);
+                    width: 100%;
+                    height: 100%;
+                    &--half1{
+                        @include flex-column($around);
+                        width: 100%;
+                        height: 50%;
+                        border-bottom: .5px solid rgba(0, 0, 0, 0.12);
+                    }
+                    &--half2{
+                        @include flex-column($around);
+                        width: 100%;
+                        height: 50%;
+                    }
+                }
+            }
+        }
+
+        .paint{
+            @include flex();
+            &--canvas{
+                background-color: gray;
+            }
+        }
+
+        .switch-menu{
+            align-self: $start;
+            @include flex-column($around);
+            width: 100%;
+            height: 246px;
+            box-shadow: $shadow;
+            background-color: $bg;
+            list-style: none;
+        }
+    }
+    .item{
+        @include flex($start);
+        width: 100%;
+        flex-grow: 1;
+        &--img{
+            margin: 0 15px;
+        }
+        &--name{
+            margin: 0 15px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 0.541327);
+        }
+
+        .color{
+            width: 23px;
+            height: 23px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            &.gray{
+                background-color: #C4C4C4;
+            }
+            &.green{
+                background-color: #41F795;
+            }
+            &.red{
+                background-color: #F74141;
+            }
+            &.blue{
+                background-color: #41B6F7;
+            }
+        }
+        &:hover{
+            cursor: pointer;
+            box-shadow: $shadow;
+        }
+        &:active{
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+$around: space-around;
+$between: space-between;
+$end: flex-end;
+$start: flex-start;
+
+$bg: #fff;
+$shadow: 0px 4px 15px -1px rgba(0,0,0,0.75);
+$family: "Roboto", sans-serif;
+
+@mixin flex ($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column ($justify: center, $align: center) {
+    display: flex;
+    flex-flow: column;
+    justify-content: $justify;
+    align-items: $align;
+}
